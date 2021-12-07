@@ -1,0 +1,18 @@
+Please follow the following instructions to run the web application along with the query attack detection mechanism:
+
+1.) Please change the 'oracle_path' in the main.py in '{your context path}\Attack Detection\src' to '{your context path}\Attack Detection\src\cifar_net.pt'
+2.) Please change the src directory path in attackDetectionTest.py to '{your context path}\Attack Detection\src'.
+3.) Please run 'pip install -r requirements.txt' in the '{your context path}\Attack Detection' directory.
+4.) Please run 'py main.py' in '{your context path}\Attack Detection\src'. -> The flask server for hosting our attack detection mechanism is now running. 
+5.) If you would like to test if our attack detection mechanism is working. Please run 'py attackDetectionTest.py' in '{your context path}\Attack Detection\src'. -> You can see a console log statement in the server terminal as "------------Found the attacker!------------" when an attack is detected (generally after 100 calls).
+6.) Please run 'npm install' at '{your context path}\Integration\Web Application\Front End'.
+7.) Please run 'npm run start' at '{your context path}\Integration\Web Application\Front End'. -> You should notice that the server is deployed and a tab in your default browser with the webpage is opened.
+8.) Please install Maven (https://maven.apache.org/install.html)
+9.) Please change 'queryModelPath' on line 30 to reflect the path of 'client.py' at '{your context path}\Attack Detection\src'.
+10.) Please run 'mvn clean install' at '{your context path}\Integration\Web Application\Back End' -> You can choose to skip this step.
+11.) Please run 'java -Xmx200m -jar "C:\Users\jashw\Desktop\Integration\Web Application\Back End\target\mlaas.demo-1.0-SNAPSHOT.jar"' at '{your context path}\Integration\Web Application\Back End'
+12.) Click on 'Change Image' in the web application and choose the image you would like to query to the system.
+13.) Click on 'Upload Image'. -> The confidence vector should be available below the button you clicked just now.
+
+
+
